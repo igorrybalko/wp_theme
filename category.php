@@ -7,9 +7,8 @@ get_header();
             while ( have_posts() ) :
                 the_post();  ?>
              
-            <?php } ?>
-                <?php $i++;
-            endwhile; ?>
+          
+            <?php endwhile; ?>
         <?php endif;?>
 
 

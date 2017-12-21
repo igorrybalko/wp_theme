@@ -77,6 +77,33 @@ function wp_remove_version() {
 }
 add_filter('the_generator', 'wp_remove_version');
 
+/*add params template */
+add_action('customize_register', function($customizer){
+
+    $customizer->add_section(
+        'example_section_one',
+        array(
+            'title' => 'Настройки шаблона',
+            'description' => '',
+            'priority' => 11,
+        )
+    );
+
+    $customizer->add_setting(
+        'ticket_link',
+        array('default' => 'http://#')
+    );
+    $customizer->add_control(
+        'ticket_link',
+        array(
+            'label' => 'Ссылка на покупку билета',
+            'section' => 'example_section_one',
+            'type' => 'text',
+        )
+    );
+
+});
+
 //function create_post_type() {
 //    register_post_type( 'acme_product',
 //        array(
