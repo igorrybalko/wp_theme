@@ -26,9 +26,7 @@ require_once (__DIR__ . '/lang/lang_' . $lang . '.php');
 <!--    <meta property="og:image" content="" />-->
 <!--    <meta property="og:description"-->
 <!--          content="" />-->
-    <title><?php if (is_front_page())  bloginfo('name'); else wp_title("",true); ?></title>
 
-    <!-- End Google Tag Manager -->
 </head>
 <body <?php body_class(); ?>>
     <header class="header">

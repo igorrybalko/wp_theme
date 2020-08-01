@@ -104,6 +104,8 @@ add_action('customize_register', function($customizer){
 
 });
 
+add_theme_support( 'title-tag' );
+
 //function create_post_type() {
 //    register_post_type( 'acme_product',
 //        array(
